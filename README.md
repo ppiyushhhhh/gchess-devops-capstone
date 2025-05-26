@@ -11,7 +11,7 @@ The go-chess-server project is a backend server application designed to manage c
 - Session management: The server handles user sessions to maintain login states and manage active connections
 
 **Game Management**
-- Matchmaking: Players can enter matching queue and wait for another player to create a match. If a player leave the match, he/she can come back later by rejoin the match.
+- Matchmaking: Players can enter matching queue and wait for another player to create a match. If players leave the match, they can come back later by rejoin the match.
 - Game state: The server maintains the state of ongoing games, tracking each move and updating the board accordingly.
 - Data persistence: After a game ended, its information is saved to database, ensuring that game states are preserved and can be retrieved later for user's analysis purposes.
   
