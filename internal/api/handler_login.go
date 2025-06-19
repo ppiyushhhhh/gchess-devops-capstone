@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/yelaco/go-chess-server/internal/auth"
-	"github.com/yelaco/go-chess-server/internal/database"
+	"github.com/yelaco/gchess-server/internal/auth"
+	"github.com/yelaco/gchess-server/internal/database"
 )
 
 /*

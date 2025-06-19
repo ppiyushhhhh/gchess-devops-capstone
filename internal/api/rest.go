@@ -3,8 +3,8 @@ package api
 import (
 	"net/http"
 
-	"github.com/yelaco/go-chess-server/pkg/config"
-	"github.com/yelaco/go-chess-server/pkg/logging"
+	"github.com/yelaco/gchess-server/pkg/config"
+	"github.com/yelaco/gchess-server/pkg/logging"
 	"go.uber.org/zap"
 )
 

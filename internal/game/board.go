@@ -1,6 +1,6 @@
 package game
 
-import "github.com/yelaco/go-chess-server/pkg/config"
+import "github.com/yelaco/gchess-server/pkg/config"
 
 type spot struct {
 	piece piece

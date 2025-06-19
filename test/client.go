@@ -18,10 +18,10 @@ import (
 
 	"github.com/gorilla/websocket"
 	"github.com/rivo/tview"
-	"github.com/yelaco/go-chess-server/internal/database"
-	"github.com/yelaco/go-chess-server/internal/game"
-	"github.com/yelaco/go-chess-server/pkg/corenet"
-	"github.com/yelaco/go-chess-server/pkg/session"
+	"github.com/yelaco/gchess-server/internal/database"
+	"github.com/yelaco/gchess-server/internal/game"
+	"github.com/yelaco/gchess-server/pkg/corenet"
+	"github.com/yelaco/gchess-server/pkg/session"
 )
 
 type matchResponse struct {

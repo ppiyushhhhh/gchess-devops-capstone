@@ -6,7 +6,7 @@ import (
 
 	_ "github.com/lib/pq"
 
-	"github.com/yelaco/go-chess-server/pkg/logging"
+	"github.com/yelaco/gchess-server/pkg/logging"
 	"go.uber.org/zap"
 )
 

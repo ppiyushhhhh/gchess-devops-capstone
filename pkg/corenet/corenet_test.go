@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/gorilla/websocket"
-	"github.com/yelaco/go-chess-server/pkg/config"
+	"github.com/yelaco/gchess-server/pkg/config"
 )
 
 var ch = make(chan bool)

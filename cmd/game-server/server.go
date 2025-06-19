@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/yelaco/go-chess-server/internal/api"
-	"github.com/yelaco/go-chess-server/internal/database"
-	"github.com/yelaco/go-chess-server/pkg/agent"
-	"github.com/yelaco/go-chess-server/pkg/config"
-	"github.com/yelaco/go-chess-server/pkg/logging"
+	"github.com/yelaco/gchess-server/internal/api"
+	"github.com/yelaco/gchess-server/internal/database"
+	"github.com/yelaco/gchess-server/pkg/agent"
+	"github.com/yelaco/gchess-server/pkg/config"
+	"github.com/yelaco/gchess-server/pkg/logging"
 	"go.uber.org/zap"
 )
 

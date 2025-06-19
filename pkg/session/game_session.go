@@ -7,9 +7,9 @@ import (
 	"sync"
 
 	"github.com/gorilla/websocket"
-	"github.com/yelaco/go-chess-server/internal/game"
-	"github.com/yelaco/go-chess-server/pkg/logging"
-	"github.com/yelaco/go-chess-server/pkg/utils"
+	"github.com/yelaco/gchess-server/internal/game"
+	"github.com/yelaco/gchess-server/pkg/logging"
+	"github.com/yelaco/gchess-server/pkg/utils"
 	"go.uber.org/zap"
 )
 

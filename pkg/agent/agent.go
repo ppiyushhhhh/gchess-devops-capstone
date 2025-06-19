@@ -2,12 +2,12 @@ package agent
 
 import (
 	"github.com/gorilla/websocket"
-	"github.com/yelaco/go-chess-server/internal/database"
-	"github.com/yelaco/go-chess-server/pkg/corenet"
-	"github.com/yelaco/go-chess-server/pkg/logging"
-	"github.com/yelaco/go-chess-server/pkg/matcher"
-	"github.com/yelaco/go-chess-server/pkg/session"
-	"github.com/yelaco/go-chess-server/pkg/utils"
+	"github.com/yelaco/gchess-server/internal/database"
+	"github.com/yelaco/gchess-server/pkg/corenet"
+	"github.com/yelaco/gchess-server/pkg/logging"
+	"github.com/yelaco/gchess-server/pkg/matcher"
+	"github.com/yelaco/gchess-server/pkg/session"
+	"github.com/yelaco/gchess-server/pkg/utils"
 	"go.uber.org/zap"
 )
 

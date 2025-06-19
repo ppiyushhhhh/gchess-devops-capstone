@@ -5,10 +5,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/yelaco/go-chess-server/pkg/config"
-	"github.com/yelaco/go-chess-server/pkg/logging"
-	"github.com/yelaco/go-chess-server/pkg/session"
-	"github.com/yelaco/go-chess-server/pkg/utils"
+	"github.com/yelaco/gchess-server/pkg/config"
+	"github.com/yelaco/gchess-server/pkg/logging"
+	"github.com/yelaco/gchess-server/pkg/session"
+	"github.com/yelaco/gchess-server/pkg/utils"
 	"go.uber.org/zap"
 )
 
