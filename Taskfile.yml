@@ -2,7 +2,7 @@ version: "3"
 
 vars:
   BINARY_NAME: gchess-server
-  PKG: ./cmd/game-server/server.go
+  PKG: ./cmd/server/main.go
 
 tasks:
   setup:
@@ -41,13 +41,22 @@ tasks:
     cmds:
       - go tool -modfile=go.tool.mod golangci-lint run
 
-  run:
-    desc: Build and run the application
-    deps: [build]
+  server:up:
+    desc: Run the erver on docker container
+    preconditions:
+      - test -f ./compose.yml
     cmds:
-      - ./{{.BINARY_NAME}}
+      - docker compose -f ./compose.yml up --build
 
-  debug:
-    desc: Debug the application
+  server:down:
+    desc: Shutdown the server docker container
+    preconditions:
+      - test -f ./compose.yml
     cmds:
-      - go run {{.PKG}}
+      - docker compose -f ./compose.yml down
+
+  server:local:
+    desc: Run the game server locally
+    cmds:
+      - go mod download
+      - go run ./cmd/server

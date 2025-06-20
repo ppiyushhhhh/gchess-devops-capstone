@@ -2,10 +2,12 @@ package database
 
 import (
 	"database/sql"
+	"fmt"
 	"log"
 
 	_ "github.com/lib/pq"
 
+	"github.com/yelaco/gchess-server/pkg/config"
 	"github.com/yelaco/gchess-server/pkg/logging"
 	"go.uber.org/zap"
 )
@@ -14,7 +16,13 @@ var db *sql.DB
 
 func InitDB() {
 	var err error
-	db, err = sql.Open("postgres", "host=db user=server password=chessserver dbname=chess sslmode=disable")
+	DBSource := fmt.Sprintf("host=%s user=%s password=%s dbname=%s sslmode=disable",
+		config.DBHost,
+		config.DBUser,
+		config.DBPassword,
+		config.DBName,
+	)
+	db, err = sql.Open("postgres", DBSource)
 	if err != nil {
 		logging.Fatal("database connection failure", zap.Error(err))
 	}

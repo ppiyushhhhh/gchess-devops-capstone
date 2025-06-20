@@ -6,9 +6,9 @@
   },
   "database": {
     "name": "postgres",
-    "host": "localhost",
-    "user": "username",
-    "password": "password"
+    "host": "db",
+    "user": "root",
+    "password": "secret"
   },
   "game": {
     "matching_timeout": 30
