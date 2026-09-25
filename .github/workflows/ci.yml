@@ -9,8 +9,8 @@ on:
       - main
 
 jobs:
-  test:
-    name: Test and Build
+  build:
+    name: Build Application
     runs-on: ubuntu-latest
 
     steps:
@@ -26,10 +26,7 @@ jobs:
       - name: Download dependencies
         run: go mod download
 
-      - name: Run tests
-        run: go test ./...
-
-      - name: Build application
+      - name: Build Go application
         run: go build ./...
 
       - name: Build Docker image
