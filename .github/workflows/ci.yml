@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on:
   push:
@@ -31,3 +31,24 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t gchess-server:ci .
+
+  deploy:
+    name: Deploy to EC2
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd ~/gchess-server
+            git pull origin main
+            docker compose up -d --build
+            sleep 10
+            docker compose ps
+            curl -sS -o /dev/null -w "%{http_code}\n" http://localhost:7202/api/sessions
