@@ -1,3 +1,4 @@
+CREATE ROLE server;
 --
 -- PostgreSQL database dump
 --
